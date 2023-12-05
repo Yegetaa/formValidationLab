@@ -20,20 +20,24 @@
 
         <!-- Registration Form -->
         <form id="registration">
-          <input name="username" type="text" placeholder="Username" />
+          <input name="username" type="text" placeholder="Username"
+          pattern="[a-zA-Z0-9]{4,}" required />
           <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
 
-          <input name="email" type="text" placeholder="Email" />
+          <input name="email" type="text" placeholder="Email"
+          pattern="^(?!.*example\.com)([_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$)" required/>
           <span class="input-icon"><i class="fa-solid fa-envelope"></i></span
           ><br />
 
-          <input name="password" type="text" placeholder="Password" />
+          <input name="password" type="text" placeholder="Password"
+          pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])(?!.*password)[A-Za-z\d@$!%*?&]{12,}$/" required />
           <span class="input-icon"><i class="fa-solid fa-key"></i></span><br />
 
           <input
             name="passwordCheck"
             type="text"
             placeholder="Repeat Password"
+            pattern= "/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])(?!.*password)[A-Za-z\d@$!%*?&]{12,}$/" required 
           />
           <span class="input-icon"><i class="fa-solid fa-key"></i></span
           ><br /><br />
@@ -43,7 +47,7 @@
             <label for="terms"
               >I agree to the&nbsp;<a href="#">Terms of Use</a>.</label
             >
-            <input type="submit" value="Register" />
+            <input type="submit" value="Register" required/>
           </div>
         </form>
       </div>
